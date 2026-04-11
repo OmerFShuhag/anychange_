@@ -28,14 +28,14 @@ Experience AnyChange's beautiful, responsive, and carefully crafted user interfa
 
 <table>
   <tr>
+    <td align="center"><b>Login Interface</b></td>
     <td align="center"><b>Dashboard Overview</b></td>
     <td align="center"><b>Detailed Dashboard</b></td>
-    <td align="center"><b>Login Interface</b></td>
   </tr>
   <tr>
+    <td><img src="assets/images/screenshots/ac_login.png" width="300"/></td>
     <td><img src="assets/images/screenshots/dashboard_1.png" width="300"/></td>
     <td><img src="assets/images/screenshots/dashboard_2.png" width="300"/></td>
-    <td><img src="assets/images/screenshots/ac_login.png" width="300"/></td>
   </tr>
   <tr>
     <td align="center"><b>Academic Insights</b></td>
