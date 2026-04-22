@@ -77,11 +77,37 @@ AnyChange adheres to the principles of **Clean Architecture** combined with Doma
 
 ```text
 lib/
-├── core/            # Core utilities, constants, theme, and shared services (e.g., Background services)
-├── data/            # Data layer: API consumption, repositories, and local storage models
-├── domain/          # Business logic: Entities, use cases, and repository interfaces
-├── presentation/    # UI layer: Screens, widgets, state management (Riverpod), and controllers
-└── main.dart        # Entry point of the Flutter application
+├── core/                   # Core utilities, constants, theme, and shared services
+│   ├── providers/          # Global application providers
+│   │   └── core_providers.dart
+│   ├── router/             # App routing and navigation config
+│   │   └── app_router.dart
+│   └── services/           # Background tasks, notifications, and version checking
+│       ├── background_service.dart
+│       ├── native_background_scheduler.dart
+│       ├── notification_service.dart
+│       └── version_check_service.dart
+├── data/                   # Data layer: API consumption and repositories
+│   └── repositories/       # Implementation of repository interfaces
+│       └── result_repository.dart
+├── domain/                 # Domain layer: Business logic and abstractions
+│   ├── models/             # Data models and entities
+│   │   └── lus_response.dart
+│   ├── repositories/       # Abstract repository interfaces
+│   │   └── i_result_repository.dart
+│   └── use_cases/          # Independent business logic units
+│       ├── auth_use_case.dart
+│       └── fetch_result_use_case.dart
+├── presentation/           # UI layer: Screens, widgets, and state management
+│   ├── providers/          # Riverpod state providers for the UI
+│   │   ├── auth_provider.dart
+│   │   └── result_provider.dart
+│   └── screens/            # Individual application screens
+│       ├── home_screen.dart
+│       ├── insights_screen.dart
+│       ├── login_screen.dart
+│       └── result_details_screen.dart
+└── main.dart               # System entry point and app initialization
 ```
 
 ---
